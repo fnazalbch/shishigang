@@ -21,7 +21,7 @@ public class RootDetectorv2 extends CordovaPlugin {
         if (action.equals("listApps")) {
             PackageManager packageManager = this.cordova.getActivity().getPackageManager();
             List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_METADATA);
-            ArrayList<JSONObject> res = new ArrayList<>();
+            ArrayList<JSONObject> res = new ArrayList<JSONObject>();
 
             for (ApplicationInfo packageInfo : packages) {
                 JSONObject json = new JSONObject();

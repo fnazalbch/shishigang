@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75e75fce-6bb2-4126-b8b4-0b995d97db57" name="Default Changelist" comment="Plugin Root">
+      <change afterPath="$PROJECT_DIR$/.idea/RootDetectorv2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c610ac4c37a060e8792e83b8fe52ca0a8453744" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad0b38a827036f97777d245d29c8208928cfc9d4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/android/RootDetectorv2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/RootDetectorv2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bKuztwQW5ok5botD2em1psz6Vs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75e75fce-6bb2-4126-b8b4-0b995d97db57" name="Default Changelist" comment="" />
+      <created>1588393371713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588393371713</updated>
+      <workItem from="1588393373281" duration="767000" />
+      <workItem from="1588536569119" duration="6000" />
+      <workItem from="1588539620981" duration="1774000" />
+    </task>
+    <task id="LOCAL-00001" summary="Plugin Root">
+      <created>1588540489045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588540489045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Plugin Root" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plugin Root" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="568" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588393390812">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="568" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.821@0.23.1440.821" timestamp="1588393390812" />
+    <state x="301" y="31" key="CommitChangelistDialog2" timestamp="1588540488691">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="301" y="31" key="CommitChangelistDialog2/0.23.1440.816@0.23.1440.816" timestamp="1588540488691" />
+    <state x="502" y="354" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588540462370">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="502" y="354" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1588540462370" />
+    <state x="383" y="165" width="672" height="678" key="search.everywhere.popup" timestamp="1588393496991">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="383" y="165" width="672" height="678" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1588393496991" />
+  </component>
+</project>
