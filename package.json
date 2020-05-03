@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "RootDetector v2 for MiPass",
+  "cordova": {
+    "id": "cordova-plugin-root-detector-v2",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Fuad Nazal",
+  "license": "ISC"
+}
