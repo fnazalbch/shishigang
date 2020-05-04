@@ -1,4 +1,4 @@
-package cordova-plugin-root-detector-v2;
+package android;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
