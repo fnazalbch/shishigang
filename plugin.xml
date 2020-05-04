@@ -2,8 +2,11 @@
 <plugin id="cordova-plugin-root-detector-v2" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>RootDetectorv2</name>
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0"/>
+    </engines>
     <js-module name="RootDetectorv2" src="www/RootDetectorv2.js">
-        <clobbers target="rootdetector"/>
+        <clobbers target="RootDetectorv2"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
@@ -12,6 +15,7 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/RootDetectorv2.java"
                      target-dir="src/android/RootDetectorv2"/>
     </platform>
