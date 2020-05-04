@@ -15,7 +15,9 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <!-- Empty -->
+        </config-file>
         <source-file src="src/android/RootDetectorv2.java"
                      target-dir="src/android/RootDetectorv2"/>
     </platform>
