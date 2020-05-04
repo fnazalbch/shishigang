@@ -1,6 +1,7 @@
 package android;
 
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
@@ -36,8 +37,8 @@ public class RootDetectorv2 extends CordovaPlugin {
                 res.add(json);
             }
             JSONArray array = new JSONArray(res);
-            // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, array));
-            callbackContext.success(array);
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, array));
+            // callbackContext.success(array);
             return true;
         }
         callbackContext.error("Ha ocurrido un error");
