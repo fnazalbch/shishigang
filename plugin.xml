@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>RootDetectorv2</name>
     <js-module name="RootDetectorv2" src="www/RootDetectorv2.js">
-        <clobbers target="cordova.plugins.RootDetectorv2"/>
+        <clobbers target="rootdetector"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
