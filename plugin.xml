@@ -6,7 +6,7 @@
         <engine name="cordova" version="&gt;=3.0.0"/>
     </engines>
     <js-module name="RootDetectorv2" src="www/RootDetectorv2.js">
-        <clobbers target="RootDetectorv2"/>
+        <clobbers target="rootdetector"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
