@@ -9,6 +9,7 @@
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="rootdetector">
                 <param name="android-package" value="RootDetectorv2"/>
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         <source-file src="src/android/RootDetectorv2.java"

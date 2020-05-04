@@ -21,6 +21,7 @@ import org.json.JSONObject;
  */
 public class RootDetectorv2 extends CordovaPlugin {
 
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
     }
