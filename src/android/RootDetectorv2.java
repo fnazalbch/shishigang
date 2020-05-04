@@ -4,6 +4,8 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.api.Plugin;
+import org.apache.cordova.api.PluginResult;
 
 import java.util.*;
 
@@ -27,7 +29,7 @@ public class RootDetectorv2 extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("listApps")) {
             PackageManager packageManager = this.cordova.getActivity().getPackageManager();
-            List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_METADATA);
+            List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
             ArrayList<JSONObject> res = new ArrayList<JSONObject>();
 
             for (ApplicationInfo packageInfo : packages) {
