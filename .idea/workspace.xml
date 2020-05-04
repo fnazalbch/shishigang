@@ -43,7 +43,7 @@
       <updated>1588393371713</updated>
       <workItem from="1588393373281" duration="767000" />
       <workItem from="1588536569119" duration="6000" />
-      <workItem from="1588539620981" duration="5351000" />
+      <workItem from="1588539620981" duration="5598000" />
     </task>
     <task id="LOCAL-00001" summary="Plugin Root">
       <created>1588540489045</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588556344420</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="plugin">
+      <created>1588559447391</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588559447393</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,18 +113,19 @@
     <MESSAGE value="args" />
     <MESSAGE value="plugin.xml" />
     <MESSAGE value="import" />
-    <option name="LAST_COMMIT_MESSAGE" value="import" />
+    <MESSAGE value="plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="plugin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="568" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588393390812">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="568" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.821@0.23.1440.821" timestamp="1588393390812" />
-    <state x="301" y="31" key="CommitChangelistDialog2" timestamp="1588556344146">
+    <state x="301" y="31" key="CommitChangelistDialog2" timestamp="1588559446969">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="301" y="31" key="CommitChangelistDialog2/0.23.1440.816@0.23.1440.816" timestamp="1588540488691" />
-    <state x="301" y="31" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1588556344146" />
+    <state x="301" y="31" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1588559446969" />
     <state x="502" y="354" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588540462370">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
