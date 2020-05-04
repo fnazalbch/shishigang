@@ -39,8 +39,8 @@ public class RootDetectorv2 extends CordovaPlugin {
                 res.add(json);
             }
             JSONArray array = new JSONArray(res);
-            // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, array));
-            callbackContext.success("Hola");
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, array.toString()));
+            // callbackContext.success("Hola");
             return true;
         }
         callbackContext.error("Ha ocurrido un error");
