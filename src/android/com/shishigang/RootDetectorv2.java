@@ -40,11 +40,25 @@ public class RootDetectorv2 extends CordovaPlugin {
             }
             JSONArray array = new JSONArray(res);
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, array.toString()));
-            // callbackContext.success("Hola");
             return true;
         }
-        callbackContext.error("Ha ocurrido un error");
-        return false;
+        else if (action.equals("lookForRootApp")) {
+            PackageManager packageManager = this.cordova.getActivity().getPackageManager();
+            List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
+
+            for (ApplicationInfo packageInfo : packages) {
+                if (packageInfo.packageName.equals("com.topjohnwu.magisk")) {
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Se ha encontrado app root"));
+                    return true;
+                }
+            }
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "No se ha detectado app root"));
+            return false;
+        }
+        else {
+            callbackContext.error("Ha ocurrido un error");
+            return false;
+        }
     }
 
     /**

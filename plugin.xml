@@ -20,8 +20,6 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-
         <source-file src="src/android/com/shishigang/RootDetectorv2.java" target-dir="src/com/shishigang" />
     </platform>
-
 </plugin>
