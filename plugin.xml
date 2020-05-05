@@ -10,7 +10,7 @@
 
     <!-- Android -->
     <platform name="android">
-        <js-module src="www/rootdetectorv2" name="plugin">
+        <js-module src="www/rootdetectorv2.js" name="plugin">
             <runs />
             <clobbers target="rootdetectorv2" />
         </js-module>
