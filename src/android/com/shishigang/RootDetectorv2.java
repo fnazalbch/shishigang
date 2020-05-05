@@ -1,4 +1,4 @@
-package android;
+package com.shishigang;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;

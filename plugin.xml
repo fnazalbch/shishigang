@@ -1,24 +1,27 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-root-detector-v2" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>RootDetectorv2</name>
-    <engines>
-        <engine name="cordova" version="&gt;=3.0.0"/>
-    </engines>
-    <js-module name="RootDetectorv2" src="www/RootDetectorv2.js">
-        <clobbers target="rootdetector"/>
-    </js-module>
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-root-detector-v2"
+    version="1.0.0">
+    <name>Root Detector BCH</name>
+    <description>Test 1</description>
+    <license>MIT</license>
+    <keywords>android,root,detector</keywords>
+
+    <!-- Android -->
     <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="rootdetector">
-                <param name="android-package" value="RootDetectorv2"/>
-                <!-- <param name="onload" value="true" /> -->
+        <js-module src="www/rootdetectorv2" name="plugin">
+            <runs />
+            <clobbers target="rootdetectorv2" />
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="rootdetectorv2">
+                <param name="android-package" value="com.shishigang.RootDetectorv2" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml">
-            <!-- Empty -->
-        </config-file>
-        <source-file src="src/android/RootDetectorv2.java"
-                     target-dir="src/android/RootDetectorv2"/>
+
+        <source-file src="src/android/com/shishigang/RootDetectorv2.java" target-dir="src/com/shishigang" />
     </platform>
+
 </plugin>
