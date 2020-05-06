@@ -8,10 +8,11 @@ import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
 
 import java.util.*;
+import java.io.*;
+import android.util.Log;
 
 import android.content.pm.PackageManager;
 import android.content.pm.ApplicationInfo;
-import android.os.SELinux;
 
 import org.json.JSONArray;
 import org.json.JSONException;
