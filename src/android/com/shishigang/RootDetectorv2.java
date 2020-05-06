@@ -70,7 +70,7 @@ public class RootDetectorv2 extends CordovaPlugin {
         }
     }
 
-    private static boolean isSELinuxEnforced(JSONObject result) {
+    private static boolean isSELinuxEnforced(JSONObject result) throws JSONException {
         StringBuffer output = new StringBuffer();
         Process p;
 
