@@ -85,6 +85,7 @@ public class RootDetectorv2 extends CordovaPlugin {
             }
         }
         catch (Exception e) {
+            result.put("Error", e.getMessage());
             result.put("Catch", false);
             Log.e("Ionic Android Plugin", "No existe soporte getenforce");
             e.printStackTrace();
