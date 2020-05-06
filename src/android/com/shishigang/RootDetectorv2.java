@@ -11,6 +11,7 @@ import java.util.*;
 
 import android.content.pm.PackageManager;
 import android.content.pm.ApplicationInfo;
+import android.os.SELinux;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,6 +55,11 @@ public class RootDetectorv2 extends CordovaPlugin {
             }
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "No se ha detectado app root"));
             return false;
+        }
+        else if (action.equals("isSELinux")) {
+            boolean result = SELinux.isSELinuxEnforced();
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
+            return true;
         }
         else {
             callbackContext.error("Ha ocurrido un error");

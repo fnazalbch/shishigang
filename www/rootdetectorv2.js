@@ -8,6 +8,9 @@ var rootdetectorv2 = {
     },
     lookForRootApp: function (success, error) {
         exec(success, error, PLUGIN_NAME, 'lookForRootApp', []);
+    },
+    isSELinux: function (success, error) {
+        exec(success, error, PLUGIN_NAME, 'isSELinux', []);
     }
 };
 
