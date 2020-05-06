@@ -79,7 +79,6 @@ public class RootDetectorv2 extends CordovaPlugin {
             p.waitFor();
             BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String line = "";
-            result.put("Reader", org.apache.commons.io.IOUtils.toString(reader));
             while ((line = reader.readLine()) != null) {
                 output.append(line);
             }
