@@ -57,12 +57,43 @@ public class RootDetectorv2 extends CordovaPlugin {
             return false;
         }
         else if (action.equals("isSELinux")) {
-            boolean result = SELinux.isSELinuxEnforced();
+            boolean result = isSELinuxEnforced();
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
             return true;
         }
         else {
             callbackContext.error("Ha ocurrido un error");
+            return false;
+        }
+    }
+
+    private static boolean isSELinuxEnforced() {
+        StringBuffer output = new StringBuffer();
+        Process p;
+
+        try {
+            p = Runtime.getRuntime().exec("getenforce");
+            p.waitFor();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line = "";
+            while ((line = reader.readLine()) != null) {
+                output.append(line);
+            }
+        }
+        catch (Exception e) {
+            Log.e("Ionic Android Plugin", "No existe soporte getenforce");
+            e.printStackTrace();
+            return false;
+        }
+        String response = output.toString();
+        if ("Enforcing".equals(response)) {
+            return true;
+        }
+        else if ("Permissive".equals(response)) {
+            return false;
+        }
+        else {
+            Log.e("Ionic Android Plugin", "Valor inesperado");
             return false;
         }
     }
