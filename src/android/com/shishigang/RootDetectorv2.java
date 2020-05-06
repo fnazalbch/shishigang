@@ -91,7 +91,7 @@ public class RootDetectorv2 extends CordovaPlugin {
         }
         String response = output.toString();
         if ("Enforcing".equals(response)) {
-            result.put("Result", true)
+            result.put("Result", true);
             return true;
         }
         else if ("Permissive".equals(response)) {
