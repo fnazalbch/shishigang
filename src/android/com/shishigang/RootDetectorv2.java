@@ -91,15 +91,18 @@ public class RootDetectorv2 extends CordovaPlugin {
         }
         String response = output.toString();
         if ("Enforcing".equals(response)) {
+            result.put("Response": response);
             result.put("Result", true);
             return true;
         }
         else if ("Permissive".equals(response)) {
+            result.put("Response": response);
             result.put("Permissive", false);
             return false;
         }
         else {
             Log.e("Ionic Android Plugin", "Valor inesperado");
+            result.put("Response": response);
             result.put("Unexpected", false);
             return false;
         }
