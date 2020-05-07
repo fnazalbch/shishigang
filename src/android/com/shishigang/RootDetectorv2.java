@@ -75,8 +75,7 @@ public class RootDetectorv2 extends CordovaPlugin {
         Process p;
 
         try {
-            String[] cmd = new String[] { "shell", "getenforce" };
-            p = Runtime.getRuntime().exec(cmd);
+            p = Runtime.getRuntime().exec("getenforce");
             p.waitFor();
             BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String line = "";
