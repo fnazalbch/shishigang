@@ -10,6 +10,9 @@ import org.apache.cordova.CordovaWebView;
 import java.util.*;
 import java.io.*;
 import android.util.Log;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import android.content.pm.PackageManager;
 import android.content.pm.ApplicationInfo;
@@ -85,6 +88,8 @@ public class RootDetectorv2 extends CordovaPlugin {
             "/dev"
     };
 
+    JSONObject result = new JSONObject();
+
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -92,7 +97,6 @@ public class RootDetectorv2 extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        JSONObject result = new JSONObject();
 
         if (action.equals("listApps")) {
             PackageManager packageManager = this.cordova.getActivity().getPackageManager();
@@ -175,13 +179,41 @@ public class RootDetectorv2 extends CordovaPlugin {
         }
     }
 
-    public static boolean checkForRootPackages(String userPackage) {
+    public static boolean checkForRootPackages(String userPackage) throws InterruptedException {
+        /* Concurrent */
+        final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         for (String pkg : knownRootAppsPackages) {
-            if (userPackage.equals(pkg)) {
+            executorService.submit(new java.lang.Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        if (executeEqualityForRootPackages(pkg, userPackage)) {
+                            executorService.shutdown();
+                            return true;
+                        }
+                        catch (CloneNotSupportedException e) {
+                            result.put("Error", e.getMessage());
+                        }
+                    }
+                }
+            });
+            /**if (userPackage.equals(pkg)) {
                 return true;
-            }
+            }*/
+        }
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        }
+        catch (InterruptedException e) {
+            executorService.shutdownNow();
+            throw e;
         }
         return false;
+    }
+
+    private static boolean executeEqualityForRootPackages(String pkg, String userPackage) {
+        return userPackage
     }
 
     public static boolean checkForDangerousApps(String userPackage) {
