@@ -51,7 +51,11 @@ public class RootDetectorv2 extends CordovaPlugin {
             List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
 
             for (ApplicationInfo packageInfo : packages) {
-                if (packageInfo.packageName.equals("com.topjohnwu.magisk")) {
+                /* if (packageInfo.packageName.equals("com.topjohnwu.magisk")) {
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Se ha encontrado app root"));
+                    return true;
+                } */
+                if (RootUtils.checkForRootPackages(packageInfo.packageName)) {
                     callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Se ha encontrado app root"));
                     return true;
                 }
