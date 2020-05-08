@@ -88,7 +88,7 @@ public class RootDetectorv2 extends CordovaPlugin {
             "/dev"
     };
 
-    JSONObject result = new JSONObject();
+    public static JSONObject result = new JSONObject();
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
