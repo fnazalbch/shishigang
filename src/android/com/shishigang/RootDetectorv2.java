@@ -213,7 +213,7 @@ public class RootDetectorv2 extends CordovaPlugin {
     }
 
     private static boolean executeEqualityForRootPackages(String pkg, String userPackage) {
-        return userPackage
+        return userPackage.equals(pkg);
     }
 
     public static boolean checkForDangerousApps(String userPackage) {
