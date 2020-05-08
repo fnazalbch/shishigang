@@ -191,9 +191,9 @@ public class RootDetectorv2 extends CordovaPlugin {
                             executorService.shutdown();
                             return true;
                         }
-                        catch (CloneNotSupportedException e) {
-                            result.put("Error", e.getMessage());
-                        }
+                    }
+                    catch (CloneNotSupportedException e) {
+                        result.put("Error", e.getMessage());
                     }
                 }
             });
