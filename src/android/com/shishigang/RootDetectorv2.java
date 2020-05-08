@@ -180,6 +180,7 @@ public class RootDetectorv2 extends CordovaPlugin {
     }
 
     public static boolean checkForRootPackages(String userPackage) throws InterruptedException {
+        boolean res = false;
         /* Concurrent */
         final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         for (String pkg : knownRootAppsPackages) {
@@ -188,8 +189,8 @@ public class RootDetectorv2 extends CordovaPlugin {
                 public void run() {
                     try {
                         if (executeEqualityForRootPackages(pkg, userPackage)) {
-                            executorService.shutdown();
-                            return true;
+                            res = true;
+                            executorService.shutdownNow();
                         }
                     }
                     catch (CloneNotSupportedException e) {
@@ -209,7 +210,7 @@ public class RootDetectorv2 extends CordovaPlugin {
             executorService.shutdownNow();
             throw e;
         }
-        return false;
+        return res;
     }
 
     private static boolean executeEqualityForRootPackages(String pkg, String userPackage) {
